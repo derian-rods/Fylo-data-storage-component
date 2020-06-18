@@ -10,15 +10,29 @@ body{
 }
 .main{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;   
+    background: url("../images/bg-desktop.svg") no-repeat bottom;
+    background-size: 100% 50%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-flow: row wrap;
+    position: relative;
 }
 .fylo{
-    border-radius: 1em 6em 1em 1em;
+    border-radius: 15px 80px 15px 15px;
     background:hsl(228, 56%, 26%);
-    width: 22em;
+    width: 18em;
+    margin-right: 2em;
+    order: 1;
 }
 .logo {
     display: block;
-    margin: 1.5em;
+    margin: 2em 1em 0em 1em;
 
 }
 .menu{
@@ -30,17 +44,60 @@ button{
     border: solid hsl(229, 57%, 11%);
     border-radius: 5px;
     width: 3em;
-    height: 2.5em;
+    height: 2.9em;
     background:hsl(229, 57%, 11%);
     margin:  1em 0.2em 0.4em 1em;
     cursor: pointer;
 }
 .storage{
     width: 28em;
-    height: 4em;
+    height: 5.5em;
     background:hsl(228, 56%, 26%);
     border-radius: 0.5em;
     padding: 1em;
+    margin-top: 1em;
+    order: 2;
+}
+.leftm{
+    position: absolute;
+    right: 4em;
+    top: 0;
+    background: #fff;
+    border-radius: 10px;
+    width: 6em;
+    height: 3em;
+    order: 3;
+}
+
+.nleft{
+    display: flex;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    padding: 1em;
+}
+.nleft strong{
+    color: black;
+    font-weight: 700;
+    font-size: 14px;
+    margin-right: 0.5em;
+}
+.nleft small{
+    position: relative;
+    font-weight: 700;
+    margin-top: 1em;
+    font-size: 6px;
+    margin-top: 0.5em;
+}
+.nleft::after{
+    border: 10px solid white;
+    content: '';
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    position: absolute;
+    bottom: -12px;
+    right: -8px;
+    transform: rotate(-36deg);
 }
 span{
     color:hsl(229, 7%, 55%);
@@ -49,4 +106,146 @@ span{
 span strong{
     color: hsl(243, 100%, 93%);
     font-weight: 700;
+}
+.progressB{
+    margin-top: 1em;
+    height: 20px;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 15px;
+}
+.loaderp{
+    margin-top: 1em;
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    height: 20px;
+    width: 80%;
+    border-radius: 15px;
+    position: relative;
+    animation: progress 2s ease-in;
+}
+.loaderp::after{
+    content: "";
+    margin:2px;
+    width: 10px;
+    height: 10px;
+    right: 2px;
+    position: absolute;
+    background:hsl(0, 0%, 100%);
+    border: solid #fff 2px;
+    border-radius: 100%;
+
+}
+.memory{
+    display: flex;
+    justify-content: space-between;
+}
+.memory span{
+    margin-top: 1em;
+    font-weight: 700;
+    color: hsl(243, 100%, 93%);
+}
+@keyframes progress{
+ 0%{
+    background: hsl(6, 100%, 80%) ; width: 0%;   
+ }
+ 50%{
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%)) ; width: 50%;
+ }
+ 100%{
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%)) ; width: 80%;  
+ }
+}
+@media only screen and (max-width: 414px){
+    .storage{
+        width: 60%;
+        height: 120px;
+        position: relative;
+    }
+    .storage span{
+        padding: 2em;
+        font-size: 0.85em;
+
+    }
+    .main{ 
+        background: url("../images/bg-mobile.svg") no-repeat;
+        background-size: cover;
+    }
+    .fylo{
+        width: 20em;
+        margin-left: 2em;   
+    }
+    .memory span{
+        margin-top: 0em;
+    }
+    .leftm{     
+        position: absolute;
+        width: 140px;
+        height: 70px;
+        top: 120px;
+        left: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nleft::after{
+        display: none;
+    }
+    .leftm strong{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .leftm small{
+        font-size: 9px;
+        margin-top: 13px;
+    }
+}
+@media only screen and (max-width: 360px){
+    .storage{
+        width: 70%;
+        height: 120px;
+        position: relative;
+    }
+    .leftm{     
+        position: absolute;
+        width:100px;
+        height: 70px;
+        top: 120px;
+        left: 86px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 375px){
+    .storage{
+        width: 66%;
+        height: 120px;
+        position: relative;
+    }
+    .leftm{     
+        position: absolute;
+        width:100px;
+        height: 70px;
+        top: 120px;
+        left: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 320px){
+    .storage{
+        width: 75%;
+        height: 120px;
+        position: relative;
+    }
+    .leftm{     
+        position: absolute;
+        width:100px;
+        height: 70px;
+        top: 120px;
+        left: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

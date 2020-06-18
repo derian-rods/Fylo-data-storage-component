@@ -10,8 +10,8 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution { font-size: 11px; text-align: center; color:hsl(6, 100%, 80%);}
+    .attribution a { color: #fff; }
   </style>
 </head>
 <body>
@@ -22,16 +22,30 @@
     -->
       <main>
         <div class="main">
-          <div class="fylo">
-            <img class="logo" src="./images/logo.svg" alt="Fylo" >
-            <div class="menu1">
-              <button><img src="./images/icon-document.svg" alt="icon-document"></button>
-              <button><img src="./images/icon-folder.svg" alt="icon-folder"></button>
-              <button><img src="./images/icon-upload.svg" alt="icon-upload"></button>
+          <div class="container">
+            <div class="fylo">
+              <img class="logo" src="./images/logo.svg" alt="Fylo" >
+              <div class="menu">
+                <button><img src="./images/icon-document.svg" alt="icon-document"></button>
+                <button><img src="./images/icon-folder.svg" alt="icon-folder"></button>
+                <button><img src="./images/icon-upload.svg" alt="icon-upload"></button>
+              </div>
             </div>
-          </div>
-          <div class="storage">
-            <span>You’ve used <strong>815 GB</strong> of your storage</span>
+            <div class="storage">
+              <span>You’ve used <strong>815 GB</strong> of your storage</span>
+              <div class="progressB">
+                <div class="loaderp">
+                  
+                </div>
+              </div>
+              <div class="memory">
+                <span>0 GB</span>
+                <span>1000 GB</span>
+              </div>
+              <div class="leftm">
+                <span class="nleft"><strong>185</strong><small> GB LEFT</small></span>
+              </div>
+            </div>
           </div>
         </div>
       </main>
