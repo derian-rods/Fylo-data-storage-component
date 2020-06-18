@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-size: 14px;
+    background: hsl(229, 57%, 11%);
+    font-family: 'Raleway', sans-serif;
+}
+.main{
+    display: flex;
+}
+.fylo{
+    border-radius: 1em 6em 1em 1em;
+    background:hsl(228, 56%, 26%);
+    width: 22em;
+}
+.logo {
+    display: block;
+    margin: 1.5em;
+
+}
+.menu{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1em;
+}
+button{
+    border: solid hsl(229, 57%, 11%);
+    border-radius: 5px;
+    width: 3em;
+    height: 2.5em;
+    background:hsl(229, 57%, 11%);
+    margin:  1em 0.2em 0.4em 1em;
+    cursor: pointer;
+}
+.storage{
+    width: 28em;
+    height: 4em;
+    background:hsl(228, 56%, 26%);
+    border-radius: 0.5em;
+    padding: 1em;
+}
+span{
+    color:hsl(229, 7%, 55%);
+    font-weight: 400;
+}
+span strong{
+    color: hsl(243, 100%, 93%);
+    font-weight: 700;
+}
